@@ -96,6 +96,22 @@ namespace Nop.Web
                 ,domainName: new Uri("https://www.mydomain.com", UriKind.Absolute), options =>
 
             {
+                //---Play with the admisistrative settings if you like to use the management desktop as demonstrated in https://www.asp-waf.com/abuse---
+                options.Administration.DisplayName = "My NopShop";
+                options.Administration.GenerateConnectFile = true;
+                options.Administration.LogDashboardRequests = false;
+
+                //set the location that you would allow guest access from, remove it if no guest access is allowed
+                options.Administration.Users.GuestAccess(Walter.BOM.Geo.GeoLocation.EUROPE, Walter.BOM.Geo.GeoLocation.RussianFederation);
+
+                //only allow access to authenticated users from the country where they are
+                options.Administration.Users.Seed(userName:"admin",password: "pa$$word1234",access: Walter.Web.FireWall.Infrastructure.AdminAccess.Full, Walter.BOM.Geo.GeoLocation.Luxembourg);
+                
+                //by specifying an ip address a user can only access if from the IP address or address range 
+                options.Administration.WhiteList("123.123.123.1-123.123.123.255");
+                //-- end of admin samples, use intelisense or api documentation for use additional settings
+
+
 
                 //set your public IP address when debugging so you can simulate IP based protection     
                 //your real public IP address is accessible at  Walter.Net.Networking.RuntimeValues.PublicIpAddress 
