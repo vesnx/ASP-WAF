@@ -96,7 +96,7 @@ namespace Nop.Web
                 ,domainName: new Uri("https://www.mydomain.com", UriKind.Absolute), options =>
 
             {
-                //---Play with the admisistrative settings if you like to use the management desktop as demonstrated in https://www.asp-waf.com/abuse---
+                //---Play with the administrative settings if you like to use the management desktop as demonstrated in https://www.asp-waf.com/abuse---
                 options.Administration.DisplayName = "My NopShop";
                 options.Administration.GenerateConnectFile = true;
                 options.Administration.LogDashboardRequests = false;
