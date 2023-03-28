@@ -17,6 +17,7 @@ using Walter.Web.FireWall.Reporting;
 
 namespace MVC_Core_31_Application.Controllers
 {
+    /*this file is only needed with .ne core, later version can delete this file as it's handled by the firewall*/
     [Route("api/[controller]")]
     [ApiController]
     public class UserDiscoveryController : ControllerBase
