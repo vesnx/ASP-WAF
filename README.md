@@ -58,11 +58,11 @@ public void ConfigureServices(IServiceCollection services)
                     })//you do not need a firewall database for state storage but it does perform paster and you can retain data longer
                     .UseDatabase(connectionString: Configuration.GetConnectionString("FireWallState"),schema:"dbo",dataRetention: TimeSpan.FromDays(365));
     
-    // minimal protection
-    services.AddMvc(options =>
-    {
-        options.Filters.Add<Walter.Web.FireWall.Filters.FireWallFilter>();
-    });
+    // minimal protection configuration with .net core, updates to .net 6 and 7 do not need this
+    //services.AddMvc(options =>
+    //{
+    //    options.Filters.Add<Walter.Web.FireWall.Filters.FireWallFilter>();
+    //});
 
 }
 
