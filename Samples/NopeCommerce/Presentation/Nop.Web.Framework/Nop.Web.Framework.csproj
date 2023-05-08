@@ -14,11 +14,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BundlerMinifier.Core" Version="3.2.447" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
-    <PackageReference Include="Walter.Web.FireWall" Version="2021.9.7.1901" />
-    <PackageReference Include="WebMarkupMin.AspNetCore3" Version="2.8.2" />
-    <PackageReference Include="WebMarkupMin.NUglify" Version="2.8.1" />
+    <PackageReference Include="BundlerMinifier.Core" Version="3.2.449" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Walter.Web.FireWall" Version="2023.5.4.1552" />
+    <PackageReference Include="WebMarkupMin.AspNetCore3" Version="2.13.9" />
+    <PackageReference Include="WebMarkupMin.NUglify" Version="2.13.6" />
   </ItemGroup>
 
   <ItemGroup>
